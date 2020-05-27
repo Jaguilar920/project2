@@ -33,10 +33,10 @@ app.use('/user', userController);
 
 mongoose.connect(DBURI, {
     useNewUrlParser: true,
+    useFindAndModify: true,
     useUnifiedTopology: true,
 });
 mongoose.connection.once('open', () => {
-    console.log('connected to mongo');
 });
 
 
