@@ -14,6 +14,7 @@ const userController = require('./controllers/users_controller.js');
 const session = require('express-session');
 const User = require('./models/users.js');
 const bcrypt = require('bcryptjs');
+const DBURI = process.env.MONGODB_URI || 'mongodb://localhost/project2';
 
 /*  Middle */
 app.use(express.static('public'));
