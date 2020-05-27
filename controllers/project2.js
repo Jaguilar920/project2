@@ -19,7 +19,7 @@ const isAuthenticated = (req, res, next) => {
 
 /*  Index  */
 characterController.get('/', isAuthenticated, (req, res) => {
-    Character.find({}, (error, allFruits) => {
+    Character.find({}, (error, allCharacters) => {
         console.log(req.session);
         res.render('Index', {
             characters: allCharacters,
