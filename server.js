@@ -9,12 +9,11 @@ const methodOverride = require('method-override');
 const characterController = require('./controllers/project2.js');
 require('dotenv').config();
 const port = process.env.PORT || 3000;
-const DBURI = process.env.MONGOURI;
 const userController = require('./controllers/users_controller.js');
 const session = require('express-session');
 const User = require('./models/users.js');
 const bcrypt = require('bcryptjs');
-const DBURI = process.env.MONGODB_URI || 'mongodb://localhost/project2';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/project2';
 
 /*  Middle */
 app.use(express.static('public'));
@@ -32,7 +31,7 @@ app.engine('jsx', require('express-react-views').createEngine());
 app.use('/dnd', characterController);
 app.use('/user', userController);
 
-mongoose.connect(DBURI, {
+mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useFindAndModify: true,
     useUnifiedTopology: true,
