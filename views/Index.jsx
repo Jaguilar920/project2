@@ -7,7 +7,8 @@ class Index extends React.Component {
         const { characters } = this.props;
         return (
             
-                <div>
+                <div className="container">
+                    <body>
                     <h1>Character List</h1>
                     <h2>{this.props.name}</h2>
                     <nav>
@@ -21,7 +22,7 @@ class Index extends React.Component {
                                     <a href={`/dnd/${character._id}`}>
                                         {character.name}
                                     </a>
-                                    {character.class} <br></br>
+                                    {character.tree} <br></br>
                                     {character.track
                                         ? `Tracking`
                                         : `Not being tracked`}
@@ -39,6 +40,7 @@ class Index extends React.Component {
                             );
                         })}
                     </ul>
+                    </body>
                 </div>
             
         );

@@ -8,8 +8,7 @@ const characterSchema = new Schema({
     Class: { type: String, required: true },
     Alignment: { type: String, required: true },
     Background: { type: String, required: true },
-    // Stats: { type: String, required: true },
-    Tracking: Boolean
+    Track: Boolean
 }, { timestamps: true });
 
 

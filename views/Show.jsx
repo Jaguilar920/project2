@@ -4,7 +4,8 @@ class Show extends React.Component {
     render() {
         const { name, race, tree, alignment, background, tracking } = this.props.character;
         return (
-            <div>
+            <div className="container">
+                <body>
                 <h1>Characters</h1>
                 <p>{name} </p>
                 <p>{race}</p>
@@ -12,6 +13,7 @@ class Show extends React.Component {
                 <p>{alignment}</p>
                 <p>{background}</p>
                 <p>{tracking ? `Tracking` : `Not being tracked`}</p>
+                </body>
             </div>
         )
     }

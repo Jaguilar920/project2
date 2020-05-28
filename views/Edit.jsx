@@ -4,7 +4,8 @@ class Edit extends React.Component {
     render() {
         const { _id, name, race, tree, alignment, background, track } = this.props.character;
         return (
-            <div>
+            <div className="container">
+                <body>
                 <h1>Edit Character</h1>
                 <form
                     action={`/characters/edit/${character._id}?_method=put`}
@@ -33,6 +34,7 @@ class Edit extends React.Component {
                     <br />
                     <input type="submit" name="" value="Edit Character" />
                 </form>
+                </body>
             </div>
         );
     }
