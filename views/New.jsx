@@ -8,7 +8,7 @@ class New extends React.Component {
               <form action="/dnd" method="POST">
                   Name: <input type="text" name="name" /><br/>
                   Race: <input type="text" name="race" /><br/>
-                  Class: <input type="text" name="class" /><br/>
+                  Class: <input type="text" name="tree" /><br/>
                   Alignment: <input type="text" name="alignment" /><br/>
                   Background: <input type="text" name="background" /><br/>
                   Tracking: <input type="checkbox" name="tracking" /><br/>

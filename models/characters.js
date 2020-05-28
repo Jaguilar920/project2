@@ -3,13 +3,13 @@ const Schema = mongoose.Schema;
 
 
 const characterSchema = new Schema({
-    name: { type: String, required: true },
-    race: { type: String, required: true },
-    class: { type: String, required: true },
-    alignment: { type: String, required: true },
-    background: { type: String, required: true },
-    stats: { type: String, required: true },
-    track: Boolean
+    Name: { type: String, required: true },
+    Race: { type: String, required: true },
+    Class: { type: String, required: true },
+    Alignment: { type: String, required: true },
+    Background: { type: String, required: true },
+    // Stats: { type: String, required: true },
+    Tracking: Boolean
 }, { timestamps: true });
 
 
