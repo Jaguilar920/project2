@@ -7,10 +7,12 @@ class AppLayout extends React.Component {
                 <head>
                     <title>DND</title>
                 </head>
+                <div class="container">
                 <body>
                     <h1>{this.props.title}</h1>
                     {this.props.children}
                 </body>
+                </div>
             </html>
         );
     }

@@ -2,7 +2,7 @@ const React = require('react');
 
 class Edit extends React.Component {
     render() {
-        const { character } = this.props;
+        const { _id, name, race, tree, alignment, background, track } = this.props.character;
         return (
             <div>
                 <h1>Edit Character</h1>
@@ -10,24 +10,24 @@ class Edit extends React.Component {
                     action={`/characters/edit/${character._id}?_method=put`}
                     method="POST"
                 >
-                    Name: <input type="text" name="name" value={character.name} />
+                    Name: <input type="text" name="name" value={name} />
                     <br />
                     Race:{' '}
-                    <input type="text" name="race" value={character.race} />
+                    <input type="text" name="race" value={race} />
                     <br />
                     Class:{' '}
-                    <input type="text" name="class" value={character.class} />
+                    <input type="text" name="tree" value={tree} />
                     <br />
                     Alignment:{' '}
-                    <input type="text" name="alignment" value={character.alignment} />
+                    <input type="text" name="alignment" value={alignment} />
                     <br />
                     Background:{' '}
-                    <input type="text" name="background" value={character.background} />
+                    <input type="text" name="background" value={background} />
                     <br />
                     Track:{' '}
                     <input
                         type="checkbox"
-                        checked={character.track ? 'checked' : ''}
+                        checked={track ? 'checked' : ''}
                         name="track"
                     />
                     <br />

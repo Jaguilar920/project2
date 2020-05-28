@@ -1,0 +1,63 @@
+.container {
+    background-color: black;
+}
+body {
+    width: 80%;
+    background-color: white;
+
+}
+
+
+fieldset {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: 500;
+    color: darkred;
+}
+
+label {
+    font-weight: 200;
+    color: black;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid darkred;
+}
+
+input:focus {
+outline-color: red;
+}
+
+input[type="submit"] {
+    height: 50px;
+    background: black;
+    box-shadow: 2px 2px darkgray;
+    color: red;
+    transition: .2s eas-in-out;
+
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    border: 2px;
+    border-color: red;
+}
+
+textarea {
+    resize:vertical;
+
+}
+textarea:focus {
+    outline-color: red;
+}

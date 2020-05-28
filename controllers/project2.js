@@ -2,13 +2,13 @@ const express = require('express');
 const characterController = express.Router();
 const Character = require('../models/characters.js');
 
-const isAuthenticated = (req, res, next) => {
-    if (req.session.currentUser) {
-        return next();
-    } else {
-        res.redirect('/sessions/new');
-    }
-};
+// const isAuthenticated = (req, res, next) => {
+//     if (req.session.currentUser) {
+//         return next();
+//     } else {
+//         res.redirect('/sessions/new');
+//     }
+// };
 
 
 
@@ -18,18 +18,17 @@ const isAuthenticated = (req, res, next) => {
 
 
 /*  Index  */
-characterController.get('/', isAuthenticated, (req, res) => {
+characterController.get('/', (req, res) => {
     Character.find({}, (error, allCharacters) => {
-        console.log(req.session);
         res.render('Index', {
             characters: allCharacters,
-            username: req.session.currentUser,
+            // username: req.session.currentUser,
         });
     });
 });
 
 /*  New  */
-characterController.get('/new', isAuthenticated, (req, res) => {
+characterController.get('/new', (req, res) => {
     res.render('New');
 });
 
@@ -47,14 +46,14 @@ characterController.post('/', (req, res) => {
 
 
 /*  Delete  */
-characterController.delete('/:id', isAuthenticated, (req, res) => {
+characterController.delete('/:id', (req, res) => {
     Character.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect('/dnd');
     });
 });
 
 /*  Show  */
-characterController.get('/:id', isAuthenticated, (req, res) => {
+characterController.get('/:id', (req, res) => {
     Character.findById(req.params.id, (error, foundCharacter) => {
         res.render('Show', {
             character: foundCharacter,
@@ -63,7 +62,7 @@ characterController.get('/:id', isAuthenticated, (req, res) => {
 });
 
 /*  Edit  */
-characterController.get('/edit/:id', isAuthenticated, (req, res) => {
+characterController.get('/edit/:id', (req, res) => {
     Character.findById(req.params.id, (error, foundCharacter) => {
         res.render('Edit', { character: foundCharacter });
     });
@@ -72,13 +71,9 @@ characterController.get('/edit/:id', isAuthenticated, (req, res) => {
 
 
 /*  update  */
-characterController.put('/edit/:id', (req, res) => {
-    if (req.body.readyToEat === 'on') {
-        req.body.readyToEat = true;
-    } else {
-        req.body.readyToEat = false;
-    }
-    Character.findByIdAndUpdate(req.params.id, req.body, (error, data) => {
+characterController.put('/:id', (req, res) => {
+    
+    Character.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, data) => {
         res.redirect('/dnd');
     });
 });
