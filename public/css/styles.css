@@ -1,11 +1,21 @@
 .container {
-    background-color: black;
+    background-color: white;
+    width: 80%;
+    height: 100vh;
+    display: relative;
+    margin: auto;
+    padding: 0px;
 }
 body {
-    width: 80%;
-    background-color: white;
+    background-color: black;
 
 }
+h3 {
+    color: darkred;
+}
+ul {
+    list-style-type: none;
+  }
 
 
 fieldset {
@@ -18,7 +28,7 @@ fieldset {
 legend {
     padding: 0 10px;
     font-weight: 500;
-    color: darkred;
+    color: red;
 }
 
 label {
@@ -39,8 +49,9 @@ input:focus {
 outline-color: red;
 }
 
-input[type="submit"] {
+Input[type="submit"] {
     height: 50px;
+    width: 150px;
     background: black;
     box-shadow: 2px 2px darkgray;
     color: red;
@@ -48,16 +59,52 @@ input[type="submit"] {
 
 }
 
-input[type="submit"]:hover {
+.BG {
+    height: 200px;
+}
+
+.custom-select {
+    width: 40%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid darkred;
+}
+.custom-select:hover {
+    outline-color: red;
+}
+
+Input[type="submit"]:hover {
     cursor: pointer;
     border: 2px;
-    border-color: red;
+    background-color: red;
+    color: black;
+    border-color: white;
+}
+
+.form-control-file {
+    border: 0px;
+}
+
+.custom-range {
+    border: 0px;
 }
 
 textarea {
     resize:vertical;
 
 }
+.icon {
+    height: 64px;
+    width: 64px;
+}
 textarea:focus {
     outline-color: red;
+}
+
+.CharName {
+    width: 40%;
+}
+
+.levelSel {
+    width: 15%;
 }

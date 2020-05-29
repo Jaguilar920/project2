@@ -37,6 +37,7 @@ mongoose.connect(MONGODB_URI, {
     useUnifiedTopology: true,
 });
 mongoose.connection.once('open', () => {
+    console.log('mdb connect')
 });
 
 

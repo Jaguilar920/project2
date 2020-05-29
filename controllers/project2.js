@@ -39,7 +39,9 @@ characterController.post('/', (req, res) => {
     } else {
         req.body.track = false;
     }
+    console.log(req.body)
     Character.create(req.body, (error, createdCharacter) => {
+        console.log(createdCharacter)
         res.redirect('/dnd');
     });
 });
@@ -71,9 +73,16 @@ characterController.get('/edit/:id', (req, res) => {
 
 
 /*  update  */
-characterController.put('/:id', (req, res) => {
-    
+characterController.put('/edit/:id', (req, res) => {
+    if (req.body.track === 'on') {
+        req.body.track = true;
+    } else {
+        req.body.track = false;
+    }
+    console.log(req.body)
+
     Character.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, data) => {
+        console.log(data)
         res.redirect('/dnd');
     });
 });
