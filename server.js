@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 // const session = require('express-session');
 // const User = require('./models/users.js');
 // const bcrypt = require('bcryptjs');
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/project2';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/JAguilar';
 
 /*  Middle */
 app.use(express.static('public'));
@@ -78,8 +78,8 @@ mongoose.connection.once('open', () => {
 //         res.redirect('/sessions/new');
 //     });
 // });
-const characterController = require('./controllers/project2.js');
-app.use('/dnd', characterController);
+const characterController = require('./controllers/portfolio.js');
+app.use('/JAguilar', characterController);
 
 app.listen(port, () => {
     console.log('listening on: ' + port);

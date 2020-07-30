@@ -10,80 +10,92 @@ class Index extends React.Component {
             <AppLayout>
                 <div className="container">
                     <body>
-                    <fieldset class="character-info">
-                    <legend><h1>Character List</h1></legend>
-                    <label>{this.props.name}</label>                   
+                        <fieldset className="character-info">
+                            <legend><h2>About Me</h2></legend>
+                        </fieldset>
+                        <br/>
+                    <fieldset className="character-info">
+                    <legend><h2>Recent Projects</h2></legend>
+
+<div className="card"> 
+  <div className="card-body shadow">
+    <h4 className="card-title">First Website</h4>
+    <p className="card-text">
+      This was my very first website project! In this project I focused on practicing the moving of data across different elements in unison.
+    </p>
+    <a href="https://jaguilar920.github.io/" className="btn btn-primary">View Project</a>
+  </div>
+</div>
+
+<br/>
+
+<div className="card">
+    <div className="card-body shadow">
+        <h4 className="card-title">DND Express</h4>
+        <p className="card-text">In this project I create my first express app project. I display my ability to create a full crud app to create, edit, delete, and view character forms.</p>
+        <a href="#" className="btn btn-primary">View Project</a>
+    </div>
+</div>
+
+<br/>
+
+<div className="card shadow">
+    <div className="card-body">
+        <h4 className="card-title">DND Full Project</h4>
+        <p className="card-text">This is the current progress of a full project I am working on. It will be a fully functioning DND Helper complete with character creation, combat simulations and skill creation.</p>
+        <a href="#" className="btn btn-primary">View Project</a>
+    </div>
+</div>
+
+                    {/* <label>{this.props.name}</label>                   
                         <ul>
                             {characters.map((character, i) => {
                                 return (
 
-<li>
+<li className="shadow">
 
            
-            <img className="rounded-circle" data-src={character.img} alt=""/>
-            <h3 className="CharName">{character.name}</h3>
+            <div className="card">
+                <div className="card-body">
+            <h3 className="CharName card-title">{character.name}</h3>
+            <p className="CharBackground card-text">{character.background}</p>
+            
+            </div>
+            </div>
            
         
            
-                 <p className="TreeName">{character.tree}</p>
-                 <div className="custom-control custom-switch">
-                     <input type="checkbox" className="custom-control-input" id="customSwitch"/>
-                     <label className="custom-control-label">Track Character</label>
-                 </div>
-                 <label className="mt-3">Level:</label>
-                 <select className="custom-select levelSel" name="level">
-                    <option selected>Lvl...</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                  </select>
+                 
                                     <br/>
                  <div className="row">
                      <div className="col">
                     <form className="edit"
-                    action={`/dnd/edit/${character._id}`}>
-                    <input type="submit" value="Edit" />
+                    action={`/JAguilar/edit/${character._id}`}>
+                    <input type="submit" value="Show" />
                     </form>
-                    </div>
+                    </div> */}
 
-                    <div className="col">
+                    {/* <div className="col">
                     <form className="delete"
-                    action={`/dnd/${character._id}?_method=DELETE`}
+                    action={`/JAguilar/${character._id}?_method=DELETE`}
                     method="post">
                     <input type="submit" value="Delete" />
                     </form>
-                    </div>
-                </div>
+                    </div> */}
+                {/* </div> */}
                 <br/>
                 <br/>
      
-</li>
+{/* </li>
 );
 })}
-                    </ul>
+                    </ul> */}
                     </fieldset>
 
-                    <form className="add"
-                    action={`/dnd/new`}>
+                    {/* <form className="add"
+                    action={`/JAguilar/new`}>
                             <input type="submit" value="New Character" />
-                    </form>
+                    </form> */}
                     </body>
                 </div>
                 </AppLayout>

@@ -1,17 +1,30 @@
 .container {
     background-color: white;
     width: 80%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: relative;
     margin: auto;
     padding: 0px;
 }
 body {
     background-color: black;
+    
 
 }
+header {
+    background-color: black;
+}
 h3 {
-    color: darkred;
+    color: darkgrey;
+}
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+h2 { 
+    text-align: center;
+    color: black;
 }
 ul {
     list-style-type: none;
@@ -28,7 +41,7 @@ fieldset {
 legend {
     padding: 0 10px;
     font-weight: 500;
-    color: red;
+    color: black;
 }
 
 label {
@@ -107,4 +120,7 @@ textarea:focus {
 
 .levelSel {
     width: 15%;
+}
+.navi {
+    align-content: center;
 }

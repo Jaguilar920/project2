@@ -42,7 +42,7 @@ characterController.post('/', (req, res) => {
     console.log(req.body)
     Character.create(req.body, (error, createdCharacter) => {
         console.log(createdCharacter)
-        res.redirect('/dnd');
+        res.redirect('/JAguilar');
     });
 });
 
@@ -50,7 +50,7 @@ characterController.post('/', (req, res) => {
 /*  Delete  */
 characterController.delete('/:id', (req, res) => {
     Character.findByIdAndRemove(req.params.id, (err, data) => {
-        res.redirect('/dnd');
+        res.redirect('/JAguilar');
     });
 });
 
@@ -83,7 +83,7 @@ characterController.put('/edit/:id', (req, res) => {
 
     Character.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, data) => {
         console.log(data)
-        res.redirect('/dnd');
+        res.redirect('/JAguilar');
     });
 });
 
